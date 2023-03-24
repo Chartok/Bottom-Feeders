@@ -14,45 +14,41 @@
 
 </head>
 <body>
-    <header class="">
-        <div class="grid-x align-center">
-            <a>
+    <header class="grid-x align-center grid-padding-y">
+        <a class="cell large-4">
             <h1 class="cell text-center" id="titleheader"><strong>Bottomfeeder</strong></h1>
-            </a>
-        </div>
+        </a>
+        <p class="cell large-6 float-center">
+            Bottomfeeder is a web application to help you find and enjoy the worst restaurants in your local area. We select the worst reviewed sites within [[DISTANCE HERE]]mi of your address on Yelp™. 
+            We hope this will help you enjoy the poorer things in life. Thank you for using BottomFeeder.
+        </p>
     </header>
-    <nav class="">
-        <div class="grid-x">
-            <a href="./index.html" class="float-center">
-                <img class="" src="./assets/images/homeicon.png" alt="home button icon" width="30px" height="30px">
-            </a>
-        </div>
-    </nav>
     <main>
-        <div class="">
-            <div class="text-center">
-                Bottomfeeder is a web application to help you find and enjoy the worst restaurants in your local area. We select the worst reviewed sites within [[DISTANCE HERE]]mi of your address on Yelp™. 
-                We hope this will help you enjoy the poorer things in life. Thank you for using BottomFeeder.
-            </div>
-            <h2 class="text-center">Search your local area</h2>
-            <div class="">
-                <input id="userSearchParams" size="60" class="float-center"></input>
-            </div>
-            <div class="grid-x align-center">
-            <form action="/action_page.php">
-                <label for="food"><h3>Choose a food:</h3></label>
-                <select name="food" id="food">
-                  <option value="seafood">Seafood</option>
-                  <option value="chinese">Chinese</option>
-                  <option value="soulfood">Soul Food</option>
-                  <option value="mexican">Mexican</option>
-                </select></form></div>
-                <div class="">
-                    <button type="button" id="searchSubmit" class="float-center grid-margin">Search</button>
+        <div class="grid-y grid-margin-y float-center">
+            <div class="cell">
+                <h2 class="text-center">Search your local area</h2>
+                <div class="cell grid-padding-y">
+                    <input id="userSearchParams" size="60" class="float-center"></input>
                 </div>
-            <div id="mainmap" class="grid-x float-center">
-                <iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
+                <div class="grid-x align-center">
+                  <form action="/action_page.php">
+                      <label for="food"><h3>Choose a food:</h3></label>
+                      <select name="food" id="food">
+                         <option value="seafood">Seafood</option>
+                         <option value="chinese">Chinese</option>
+                         <option value="soulfood">Soul Food</option>
+                         <option value="mexican">Mexican</option>
+                      </select>
+                   </form>
+                </div>
+                <div class="cell">
+                    <button type="button" id="searchSubmit" class="submit success button float-center">Search</button>
+                </div>
             </div>
+        </div>
+        <div id="mainmap" class="grid-x float-center">
+            <iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
+        </div>
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
