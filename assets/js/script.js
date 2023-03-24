@@ -4,7 +4,6 @@ var paramvalue = document.getElementById('userSearchParams');
 var freqest = document.getElementById('food');
 console.log(freqest);
 
-
 //Submit on button press.
 sbmtrqst.addEventListener("click", function(event){
     event.preventDefault();
@@ -31,7 +30,6 @@ const options = {
   
   function success(pos) {
     const crd = pos.coords;
-
   var mapinsert = document.getElementById('mainmap');
   var lat=crd.latitude;
   localStorage.setItem('latitude', lat);
@@ -54,4 +52,3 @@ async function rendermap(){
   var long=crd.longitude;
   mapinsert.innerHTML='<iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap"></iframe>'
 }
-
