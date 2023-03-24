@@ -1,15 +1,28 @@
 const querystring = window.location.search;
 const urlParam = new URLSearchParams(querystring);
-const param=urlParam.get('param');
-const foodterm=urlParam.get('foodterm');
+const param=urlParam.get('param')
+const foodselect=urlParam.get('foodterm')
 var paramvalue = document.getElementById('mapwidget');
 var lat = localStorage.getItem('latitude');
 var long= localStorage.getItem('longitude');
 var coords = lat+","+long;
 var reversegeo = {};
 var address = "";
+var hasgeolocdata='center="+lat+","+long+"&'
 var near=localStorage.getItem("searchableaddress");
-paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodterm+"+"+param+"+near+"+near+"&maptype=roadmap&center="+lat+","+long+"&zoom=13";
+console.log(lat);
+console.log(long);
+console.log(foodselect);
+if(lat !== ""&&long!==""){
+  paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"+near+"+near+"&"+hasgeolocdata+"zoom=13";
+}
+if(lat==""||long==""&&near!==""){
+  paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"+near+"+near+"&zoom=13";
+}
+else{
+  paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"&zoom=13";
+}
+
 
 
 // Reverse-Geocoding 
