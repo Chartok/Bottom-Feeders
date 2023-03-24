@@ -10,16 +10,13 @@ var reversegeo = {};
 var address = "";
 var hasgeolocdata='center="+lat+","+long+"&'
 var near=localStorage.getItem("searchableaddress");
-console.log(lat);
-console.log(long);
-console.log(foodselect);
-if(lat !== ""&&long!==""){
-  paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"+near+"+near+"&"+hasgeolocdata+"zoom=13";
+if(lat !== null&&long!==null){
+  paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"+near+"+near+"&center="+lat+","+long+"&zoom=13";
 }
-if(lat==""||long==""&&near!==""){
+if(lat==null&&near!==null||long==null && near!==null){
   paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"+near+"+near+"&zoom=13";
 }
-else{
+if(lat==null&&long==null&&near==null){
   paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodselect+"+"+param+"&zoom=13";
 }
 
