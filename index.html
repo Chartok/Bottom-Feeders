@@ -30,14 +30,25 @@
                 <div class="cell grid-padding-y">
                     <input id="userSearchParams" size="60" class="float-center"></input>
                 </div>
+                <div class="grid-x align-center">
+                  <form action="/action_page.php">
+                      <label for="food"><h3>Choose a food:</h3></label>
+                      <select name="food" id="food">
+                         <option value="seafood">Seafood</option>
+                         <option value="chinese">Chinese</option>
+                         <option value="soulfood">Soul Food</option>
+                         <option value="mexican">Mexican</option>
+                      </select>
+                   </form>
+                </div>
                 <div class="cell">
                     <button type="button" id="searchSubmit" class="submit success button float-center">Search</button>
                 </div>
             </div>
         </div>
-                <div id="mainmap" class="grid-x float-center">
-                    <iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
-                </div>
+        <div id="mainmap" class="grid-x float-center">
+            <iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
+        </div>
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

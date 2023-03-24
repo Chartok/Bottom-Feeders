@@ -1,6 +1,9 @@
 const querystring = window.location.search;
 const urlParam = new URLSearchParams(querystring);
-const param=urlParam.get('param')
+
+const param=urlParam.get('param');
+const foodterm=urlParam.get('foodterm');
+
 var paramvalue = document.getElementById('mapwidget');
 var lat = localStorage.getItem('latitude');
 var long= localStorage.getItem('longitude');
@@ -8,8 +11,8 @@ var coords = lat+","+long;
 var reversegeo = {};
 var address = "";
 var near=localStorage.getItem("searchableaddress");
-paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+param+"+near+"+near+"&maptype=roadmap&center="+lat+","+long+"&zoom=13";
 
+paramvalue.src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&q="+foodterm+"+"+param+"+near+"+near+"&maptype=roadmap&center="+lat+","+long+"&zoom=13";
 
 // Reverse-Geocoding 
 var revgeo=function(repo){
