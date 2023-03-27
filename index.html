@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/css/style.css">
 
+
 </head>
+
 <body>
+    <div class="header">
+        <a href="#default" class="logo">Logo</a>
+        <div class="header-right">
+            <a href="#" href="#home">Home</a>
+        </div>
+    </div>
+
     <header class="grid-x grid-padding-y grid-padding-x">
         <a class="cell large-5">
             <h1 class="cell text-center" id="titleheader">Bottomfeeder</h1>
@@ -31,7 +41,9 @@
                 </div>
             </div>
             <div class="cell large-5 large-offset-1">
-                <label class="text-center" for="food"><h3>Choose a food type:</h3></label>
+                <label class="text-center" for="food">
+                    <h3>Choose a food type:</h3>
+                </label>
                 <form action="/action_page.php">
                     <select name="food" id="food">
                         <option value="seafood">Seafood</option>
@@ -42,15 +54,29 @@
                 </form>
             </div>
             <div class="cell">
-                <button type="button" id="searchSubmit" class="submit success button expanded float-center">Search</button>
+                <button type="button" id="searchSubmit"
+                    class="submit success button expanded float-center">Search</button>
             </div>
         </div>
+
         <div id="mainmap" class="grid-x grid-padding-y float-center">
             <iframe class="cell" height="1000px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
         </div>
+        <div id="map" style="height: 500px;"></div>
         </div>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- jquery dependency-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- add moment js for the date  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- link google map api  -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcn09vGVEN9fu5Fy55-djFhL8_PF61ZPI&libraries=places"></script>
+
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
