@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BottomFeeder</title>
+    <title>BottomFeeders</title>
 
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-    <link rel="icon" href="./assets/image/map.png" type="image/icon type">
-
+    <link rel="icon" href="./assets/images/map.png" type="image/icon type">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
 
@@ -16,11 +14,10 @@
 <body>
     <header class="grid-x grid-padding-y grid-padding-x">
         <a class="cell large-5">
-            <h1 class="cell text-center" id="titleheader"><strong>Bottomfeeder</strong></h1>
+            <h1 class="cell text-center" id="titleheader"><strong>Bottomfeeders</strong></h1>
         </a>
         <p class="cell large-5 large-offset-1">
-            Bottomfeeder is a web application to help you find and enjoy the worst restaurants in your local area. We select the worst reviewed sites near your address on Yelp™. 
-            We hope this will help you enjoy the less savory things in life.
+            Bottomfeeders will help you find new and exciting ways to enrich your life by suggesting the worst restaurants near you!
         </p>
     </header>
     <main>
@@ -32,13 +29,15 @@
                 </div>
             </div>
             <div class="cell large-5 large-offset-1">
-                <label class="text-center" for="food"><h3>Choose a food type:</h3></label>
+                <label class="text-center" for="food"><h3>Which cuisine do you crave?:</h3></label>
                 <form action="/action_page.php">
                     <select name="food" id="food">
+                        <option value="fastFood">Fast Food</option>
                         <option value="seafood">Seafood</option>
                         <option value="chinese">Chinese</option>
                         <option value="soulfood">Soul Food</option>
                         <option value="mexican">Mexican</option>
+                        <option value="mediterranian">Mediterranian</option>
                     </select>
                 </form>
             </div>

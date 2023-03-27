@@ -52,3 +52,20 @@ async function rendermap(){
   var long=crd.longitude;
   mapinsert.innerHTML='<iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap"></iframe>'
 }
+
+
+// Fetching yelp API Endpoint data
+fetch('/search?location=Houston')
+.then(response => response.json())
+.then(data => {
+  // Process and display the data from proxy server
+  const restaurantsDiv = document.getElementById('restaurants');
+  data.businesses.forEach(restaurant => {
+    const restaurantElement = document.createElement('div');
+    restaurantElement.textContent = `${restaurant.name} (${restaurant.rating} stars)`;
+    restaurantsDiv.appendChild(restaurantElement);
+  });
+})
+.catch(error => {
+  console.error('Error fetching data:', error);
+});
