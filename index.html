@@ -7,16 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BottomFeeder</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/image/map.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
-        crossorigin="anonymous">
-
-    <!-- link google map api  -->
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcn09vGVEN9fu5Fy55-djFhL8_PF61ZPI&libraries=places"></script>
 
 </head>
 
@@ -30,18 +25,17 @@
 
     <header class="grid-x grid-padding-y grid-padding-x">
         <a class="cell large-5">
-            <h1 class="cell text-center" id="titleheader"><strong>Bottomfeeder</strong></h1>
+            <h1 class="cell text-center" id="titleheader">Bottomfeeder</h1>
         </a>
-        <p class="cell large-5 large-offset-1">
-            Bottomfeeder is a web application to help you find and enjoy the worst restaurants in your local area. We
-            select the worst reviewed sites near your address on Yelp™.
+        <p class="cell large-6 large-offset-1 text-justified">
+            Bottomfeeder is a web application to help you find and enjoy the worst restaurants in your local area. We select the worst reviewed sites near your address on Yelp™. 
             We hope this will help you enjoy the less savory things in life.
         </p>
     </header>
     <main>
         <div class="grid-x grid-margin-y grid-padding-x">
             <div class="cell large-5">
-                <h2 class="text-center">Search your city</h2>
+                <h3 class="text-center">Search your city</h3>
                 <div class="grid-padding-y">
                     <input id="userSearchParams" size="60" class="float-center"></input>
                 </div>
@@ -64,16 +58,11 @@
                     class="submit success button expanded float-center">Search</button>
             </div>
         </div>
-        <!-- <div id="mainmap" class="grid-x grid-padding-y float-center">
-            <iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
-        </div> -->
-        <div id="map" style="height: 500px;"></div>
-        <div class="footer">
 
-            <p>Copyright &copy; <span id="currentDay"> </span> Bootcamp Developers</p>
-
+        <div id="mainmap" class="grid-x grid-padding-y float-center">
+            <iframe class="cell" height="1000px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center=30.26147487904183,-97.74440594200478&zoom=13&maptype=roadmap"></iframe>
         </div>
-
+        <div id="map" style="height: 500px;"></div>
         </div>
     </main>
     <!-- jquery dependency-->
@@ -83,6 +72,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- link google map api  -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcn09vGVEN9fu5Fy55-djFhL8_PF61ZPI&libraries=places"></script>
 
     <script src="./assets/js/script.js"></script>
 </body>

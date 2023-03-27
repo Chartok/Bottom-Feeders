@@ -1,4 +1,61 @@
-/* header  start*/
+:root{
+  --jade: #63b6a1;
+  --seafoam: #1cb886;
+  --text: #fff;
+  --dropshadow:rgba(24, 156, 114, 0.5);
+  --background: #293563;
+  
+}
+
+html{
+  height: 100%;
+  background-color: var(--background);
+}
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: kanit;
+    color: var(--seafoam);
+    /* text-shadow: -2px 0 var(--jade), 0 2px var(--jade), 2px 0 var(--jade), 0 -2px var(--jade); */
+}
+
+h3 {
+  color: var(--text);
+}
+
+body{
+  margin-top: 0%;
+  background-color:var(--background);
+}
+
+p {
+  margin-top: 65px;
+  color: var(--text);
+}
+
+input {
+  height: 40px;
+}
+
+#searchSubmit {
+  font-family: Kanit;
+  font-size: large;
+  font-weight: 700;
+  font-stretch: expanded;
+  color: var(--background);
+}
+
+
+#titleheader{
+  font-size: 75px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  filter: drop-shadow(0 0 0.75 #1cb886);
+  
+  /* header  start*/
 .header {
   white-space: normal;
   overflow: hidden;
