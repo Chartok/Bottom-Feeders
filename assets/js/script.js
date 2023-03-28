@@ -26,29 +26,29 @@ const options = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0,
-  };
-  
-  function success(pos) {
+};
+
+function success(pos) {
     const crd = pos.coords;
-  var mapinsert = document.getElementById('mainmap');
-  var lat=crd.latitude;
-  localStorage.setItem('latitude', lat);
-  var long=crd.longitude;
-  localStorage.setItem('longitude', long);
-  var updatelocation = 'https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap';
-  mapinsert.innerHTML='<iframe class="cell float-center" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src='+updatelocation+'></iframe>'
-  //document.getElementById('mainmap').src = updatelocation;
-  }
-  
-  function error(err) {
+    var mapinsert = document.getElementById('mainmap');
+    var lat=crd.latitude;
+    localStorage.setItem('latitude', lat);
+    var long=crd.longitude;
+    localStorage.setItem('longitude', long);
+    var updatelocation = 'https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap';
+    mapinsert.innerHTML='<iframe class="cell float-center" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src='+updatelocation+'></iframe>'
+    //document.getElementById('mainmap').src = updatelocation;
+}
+
+function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
-  
-  navigator.geolocation.getCurrentPosition(success, error, options);
-  
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
 async function rendermap(){
-  var mapinsert = document.getElementById('mainmap');
-  var lat=crd.latitude;
-  var long=crd.longitude;
-  mapinsert.innerHTML='<iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap"></iframe>'
+    var mapinsert = document.getElementById('mainmap');
+    var lat=crd.latitude;
+    var long=crd.longitude;
+    mapinsert.innerHTML='<iframe class="cell" height="800px" style="border:0" loading="lazy" allow = "fullscreen" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDaVpz6lQ5ZUpxt0KgWKTuHehzCxbeFlM4&center='+lat+','+long+'&zoom=13&maptype=roadmap"></iframe>'
 }
