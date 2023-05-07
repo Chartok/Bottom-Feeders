@@ -1,8 +1,7 @@
 
 // Fetch yelp Fusion API
 /* const apiKey =
-  "1dmbcU3MUPgl9HrOLMgcjmUaVTiN4Zhz7uSN5oT_MWpz9yFiUYpdzaooVHE2y72tlh1suFKCCnZxdi2iPo5KJ7JntNsumSWCazEP2Qc0Phe3r7Fe1QIHm3ND1CURZHYx";
-const endpoint = `https://api.yelp.com/v3/businesses/search?term=restaurants`;
+  
 
 fetch(endpoint, {
   headers: {
